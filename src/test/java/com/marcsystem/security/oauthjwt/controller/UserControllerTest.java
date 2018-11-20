@@ -58,16 +58,11 @@ public class UserControllerTest {
                 .accept(MediaType.APPLICATION_JSON_UTF8)
                 .contentType(MediaType.APPLICATION_JSON_UTF8);
 
-        MvcResult result = mockMvc.perform(requestBuilder)
+        mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
                 .andExpect(content().string(objectMapper.writeValueAsString(getAllUsers())))
                 .andReturn();
-
-        System.out.println("Return Request code :: " + result.getResponse().getStatus());
-        System.out.println("Return message :: " + result.getResponse().getErrorMessage());
-        System.out.println("Return Content :: " + result.getResponse().getContentAsString());
-
     }
 
 
@@ -78,8 +73,6 @@ public class UserControllerTest {
         user.setId(1L);
         user.setPassword("abc");
         user.setUsername("marmar");
-
-
         users.add(user);
         return users;
     }

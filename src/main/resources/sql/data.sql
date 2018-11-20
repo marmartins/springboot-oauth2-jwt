@@ -1,4 +1,4 @@
-INSERT INTO app_user (id, firstname, password, username) VALUES (1, 'John Doe', '$2a$10$qtH0F1m488673KwgAfFXEOWxsoZSeHqqlB/8BTt3a6gsI5c2mdlfe', 'john.doe');
+INSERT INTO app_user (id, firstname, password, username) VALUES (1, 'Martins', '$2a$10$qtH0F1m488673KwgAfFXEOWxsoZSeHqqlB/8BTt3a6gsI5c2mdlfe', 'martins');
 INSERT INTO app_user (id, firstname, password, username) VALUES (2, 'Admin', '$2a$10$qtH0F1m488673KwgAfFXEOWxsoZSeHqqlB/8BTt3a6gsI5c2mdlfe', 'admin.admin');
 
 INSERT INTO app_role (id, name, description) VALUES (1, 'STANDARD_USER', 'Standard User - Has no admin rights');
